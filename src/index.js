@@ -1,6 +1,7 @@
 /**
- * Returns a very important number
- * @return {image}
+ * A function that erodes image
+ * @param {array} image - an image that will go through binary erosion
+ * @returns {array}
  */
 const testing = [
   [255, 255, 255, 255, 255],
