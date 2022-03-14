@@ -10,7 +10,7 @@ describe('test erode', () => {
       [255, 255, 255, 255, 255],
     ];
 
-    expect(erode(data)).toEqual([
+    expect(erode(data)).toStrictEqual([
       [0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0],
@@ -27,9 +27,8 @@ describe('test erode', () => {
       [255, 255, 255, 0, 255],
       [255, 255, 255, 255, 255],
     ];
-    let answer = erode(data);
 
-    expect(erode(data)).toEqual([
+    expect(erode(data)).toStrictEqual([
       [0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0],
@@ -46,9 +45,8 @@ describe('test erode', () => {
       [255, 255, 255, 255, 255],
       [255, 255, 255, 255, 255],
     ];
-    let answer = erode(data);
 
-    expect(erode(data)).toEqual([
+    expect(erode(data)).toStrictEqual([
       [0, 0, 0, 0, 0],
       [0, 255, 0, 0, 0],
       [0, 255, 0, 0, 0],
