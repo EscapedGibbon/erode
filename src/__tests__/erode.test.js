@@ -1,4 +1,4 @@
-import erode from '../index';
+import { erode } from '../erode';
 
 describe('test erode', () => {
   it('testOne', () => {
