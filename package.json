@@ -9,6 +9,7 @@
     "src"
   ],
   "scripts": {
+    "dev": "node src/index.js",
     "eslint": "eslint src",
     "eslint-fix": "npm run eslint -- --fix",
     "prepack": "rollup -c",
