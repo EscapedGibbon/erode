@@ -3,13 +3,7 @@
  * @param {array} image - an image that will go through binary erosion
  * @returns {array}
  */
-const testing = [
-  [0, 0, 0, 0, 0],
-  [0, 255, 255, 255, 0],
-  [0, 255, 255, 255, 0],
-  [0, 255, 255, 255, 0],
-  [0, 0, 0, 0, 0],
-];
+
 function erode(image) {
   const imageCopy = JSON.parse(JSON.stringify(image));
 
@@ -49,5 +43,5 @@ function erode(image) {
 
   return imageCopy2;
 }
-console.log(erode(testing));
+
 module.exports = erode;
