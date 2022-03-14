@@ -4,11 +4,11 @@
  * @returns {array}
  */
 const testing = [
-  [255, 255, 255, 255, 255],
-  [0, 255, 255, 255, 255],
-  [255, 255, 255, 255, 255],
-  [255, 255, 255, 0, 255],
-  [255, 255, 255, 255, 255],
+  [0, 0, 0, 0, 0],
+  [0, 255, 255, 255, 0],
+  [0, 255, 255, 255, 0],
+  [0, 255, 255, 255, 0],
+  [0, 0, 0, 0, 0],
 ];
 function erode(image) {
   const imageCopy = JSON.parse(JSON.stringify(image));
@@ -47,7 +47,7 @@ function erode(image) {
     }
   }
 
-  console.log(imageCopy2);
+  return imageCopy2;
 }
-erode(testing);
+console.log(erode(testing));
 module.exports = erode;

@@ -9,9 +9,14 @@ describe('test erode', () => {
       [255, 255, 255, 0, 255],
       [255, 255, 255, 255, 255],
     ];
-    let answer = erode(data);
 
-    expect(answer).toBe(answer);
+    expect(erode(data)).toEqual([
+      [0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0],
+      [0, 255, 0, 0, 0],
+      [0, 0, 0, 0, 0],
+    ]);
   });
 
   it('testTwo', () => {
@@ -24,10 +29,16 @@ describe('test erode', () => {
     ];
     let answer = erode(data);
 
-    expect(answer).toBe(answer);
+    expect(erode(data)).toEqual([
+      [0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0],
+    ]);
   });
 
-  it('testTwo', () => {
+  it('testThree', () => {
     const data = [
       [255, 255, 255, 255, 255],
       [255, 255, 255, 255, 255],
@@ -37,6 +48,12 @@ describe('test erode', () => {
     ];
     let answer = erode(data);
 
-    expect(answer).toBe(answer);
+    expect(erode(data)).toEqual([
+      [0, 0, 0, 0, 0],
+      [0, 255, 0, 0, 0],
+      [0, 255, 0, 0, 0],
+      [0, 255, 0, 0, 0],
+      [0, 0, 0, 0, 0],
+    ]);
   });
 });
