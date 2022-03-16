@@ -5,9 +5,10 @@ export default function dilate(image) {
     image[i].unshift(0);
     image[i].push(0);
   }
-  let tempArray = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-  tempArray.push(0);
-  tempArray.unshift(0);
+  let tempArray = [];
+  for (let a = 0; a < image[0].length; ++a) {
+    tempArray.push(0);
+  }
 
   image.unshift(tempArray);
   image.push(tempArray);
