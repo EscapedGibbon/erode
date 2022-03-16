@@ -5,24 +5,28 @@ export default function dilate(image) {
     image[i].unshift(0);
     image[i].push(0);
   }
-  image.unshift(image[0]);
-  image.push(image[0]);
+  let tempArray = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  tempArray.push(0);
+  tempArray.unshift(0);
+
+  image.unshift(tempArray);
+  image.push(tempArray);
   const dilatedImage = JSON.parse(JSON.stringify(image));
 
   for (let i = 1; i < image.length - 1; ++i) {
     for (let j = 1; j < image[i].length - 1; ++j) {
       if (
-        image[i - 1][j - 1] === 1 ||
-        image[i - 1][j] === 1 ||
-        image[i - 1][j + 1] === 1 ||
-        image[i][j + 1] === 1 ||
-        image[i + 1][j + 1] === 1 ||
-        image[i + 1][j] === 1 ||
-        image[i + 1][j - 1] === 1 ||
-        image[i][j - 1] === 1 ||
-        image[i][j] === 1
+        image[i - 1][j - 1] === 255 ||
+        image[i - 1][j] === 255 ||
+        image[i - 1][j + 1] === 255 ||
+        image[i][j + 1] === 255 ||
+        image[i + 1][j + 1] === 255 ||
+        image[i + 1][j] === 255 ||
+        image[i + 1][j - 1] === 255 ||
+        image[i][j - 1] === 255 ||
+        image[i][j] === 255
       ) {
-        dilatedImage[i][j] = 1;
+        dilatedImage[i][j] = 255;
       }
     }
   }
